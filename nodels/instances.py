@@ -1,7 +1,7 @@
-import json
+from .base import BaseGather
 
 
-class Instances:
+class Instances(BaseGather):
     """
     Class that gathers cloud instance information.
 
@@ -11,19 +11,11 @@ class Instances:
     """
 
     def __init__(self, region=None, data=None):
+        super().__init__(data=data)
         self.region = region
-        self.data = data
-        if self.data is None:
-            self.data = {}
-
-    def to_dict(self):
-        return self.data
 
     def gather(self):
         pass
-
-    def json(self, pretty=False):
-        return json.dumps(self.to_dict())
 
     def report(self, url):
         pass
