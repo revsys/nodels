@@ -1,6 +1,11 @@
 from nodels.instances import Instances
 
 
+def test_init():
+    i = Instances(region="foo")
+    assert i.region == "foo"
+
+
 def test_to_dict():
     i = Instances()
     assert i.to_dict() == {}

@@ -1,4 +1,10 @@
+import datetime
 import json
+
+
+def json_encoder(o):
+    if isinstance(o, (datetime.date, datetime.datetime)):
+        return o.isoformat()
 
 
 class BaseGather:
@@ -24,7 +30,9 @@ class BaseGather:
             sort_keys = True
             indent = 2
 
-        return json.dumps(self.to_dict(), sort_keys=sort_keys, indent=indent)
+        return json.dumps(
+            self.to_dict(), sort_keys=sort_keys, indent=indent, default=json_encoder
+        )
 
     def report(self, url):
         raise NotImplementedError("report needs to be defined in subclass")
