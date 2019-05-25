@@ -1,0 +1,5 @@
+Click==7.0
+kubernetes==9.0.0
+ipython==7.5.0
+boto3==1.9.155
+pytest==4.5.0
