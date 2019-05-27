@@ -56,4 +56,34 @@ class BaseParser:
         return date_parser(date_str)
 
     def size(self, json_path='$.metadata.labels."beta.kubernetes.io/instance-type"'):
+        """ Cloud instance size of this node """
         return self.get(json_path)
+
+    def kind(self, json_path='$.metadata.labels."kubernetes.io/role"'):
+        """ Kind of node, master or worker node """
+        return self.get(json_path)
+
+    def region(
+        self, json_path='$.metadata.labels."failure-domain.beta.kubernetes.io/region"'
+    ):
+        """ Region this node is located in """
+        return self.get(json_path)
+
+    def zone(
+        self, json_path='$.metadata.labels."failure-domain.beta.kubernetes.io/zone"'
+    ):
+        """ Availability zone this node is located in """
+        return self.get(json_path)
+
+    def node_kwargs(self):
+        """ Return the correct Node kwargs to create a node """
+        return {
+            "name": self.name(),
+            "external_id": self.external_id(),
+            "created": self.created(),
+            "size": self.size(),
+            "kind": self.kind(),
+            "region": self.region(),
+            "zone": self.zone(),
+            "data": self.data,
+        }
