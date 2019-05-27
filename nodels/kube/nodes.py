@@ -5,6 +5,8 @@ from kubernetes import client, config
 
 from ..base import BaseGather
 
+from .parsers import BaseParser
+
 
 @dataclass
 class Node:

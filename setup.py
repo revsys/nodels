@@ -10,7 +10,9 @@ setup(
         "kubernetes==9.0.0",
         "ipython==7.5.0",
         "boto3==1.9.154",
+        "python-dateutil>=2.8.0",
     ],
+    tests_require=["pytest==4.5.0"],
     entry_points="""
         [console_scripts]
         nodels=nodels.cli:cli

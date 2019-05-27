@@ -1,0 +1,2350 @@
+{
+    "nodes": [
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-05-22T06:30:09+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "r5.xlarge",
+                    "beta.kubernetes.io/os": "linux",
+                    "dedicated": "elasticsearch",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2b",
+                    "kops.k8s.io/instancegroup": "logs",
+                    "kubernetes.io/hostname": "ip-10-131-10-138.us-west-2.compute.internal",
+                    "kubernetes.io/role": "node",
+                    "node-role.kubernetes.io/node": ""
+                },
+                "name": "ip-10-131-10-138.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144255",
+                "self_link": "/api/v1/nodes/ip-10-131-10-138.us-west-2.compute.internal",
+                "uid": "0be717d1-7c5b-11e9-a5da-06774e828854"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-09587a5ad7a5d60f3",
+                "pod_cidr": "100.96.19.0/24",
+                "provider_id": "aws:///us-west-2b/i-09587a5ad7a5d60f3",
+                "taints": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "dedicated",
+                        "time_added": null,
+                        "value": "elasticsearch"
+                    }
+                ],
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.10.138",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "34.218.204.81",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-10-138.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-34-218-204-81.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-10-138.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "4",
+                    "ephemeral-storage": "117612512676",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32363000Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "4",
+                    "ephemeral-storage": "127617744Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32465400Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T06:41:32+00:00",
+                        "last_transition_time": "2019-05-22T06:41:32+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T06:41:24+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T06:41:24+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T06:41:24+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T06:30:09+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T06:41:34+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "docker.elastic.co/elasticsearch/elasticsearch-oss@sha256:f59f7936d018e9d2329dfa0705b305e2c8596045e80039108d67218ae5a967bc",
+                            "docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0"
+                        ],
+                        "size_bytes": 678439778
+                    },
+                    {
+                        "names": [
+                            "protokube:1.11.1"
+                        ],
+                        "size_bytes": 282663563
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "busybox@sha256:4b6ad3a68d34da29bf7c8ccb5d355ba8b4babcad1f99798204e7abb43e54ee3d",
+                            "busybox:latest"
+                        ],
+                        "size_bytes": 1199418
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "6643eab3-1f16-47ee-b911-e271c56d2c80",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec2f3947baa359ff8fdab850f3054cb2",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec2f3947-baa3-59ff-8fda-b850f3054cb2"
+                },
+                "phase": null,
+                "volumes_attached": [
+                    {
+                        "device_path": "/dev/xvdbc",
+                        "name": "kubernetes.io/aws-ebs/aws://us-west-2b/vol-0f0d881322aa50225"
+                    },
+                    {
+                        "device_path": "/dev/xvdbd",
+                        "name": "kubernetes.io/aws-ebs/aws://us-west-2b/vol-02ff5c2e81bfe788c"
+                    }
+                ],
+                "volumes_in_use": [
+                    "kubernetes.io/aws-ebs/aws://us-west-2b/vol-02ff5c2e81bfe788c",
+                    "kubernetes.io/aws-ebs/aws://us-west-2b/vol-0f0d881322aa50225"
+                ]
+            }
+        },
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-05-22T19:33:30+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "r5.xlarge",
+                    "beta.kubernetes.io/os": "linux",
+                    "dedicated": "elasticsearch",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2c",
+                    "kops.k8s.io/instancegroup": "logs",
+                    "kubernetes.io/hostname": "ip-10-131-12-180.us-west-2.compute.internal",
+                    "kubernetes.io/role": "node",
+                    "node-role.kubernetes.io/node": ""
+                },
+                "name": "ip-10-131-12-180.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144252",
+                "self_link": "/api/v1/nodes/ip-10-131-12-180.us-west-2.compute.internal",
+                "uid": "7a7e5aa7-7cc8-11e9-9a35-0a7da8025594"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-0a7b4c9228418a07c",
+                "pod_cidr": "100.96.21.0/24",
+                "provider_id": "aws:///us-west-2c/i-0a7b4c9228418a07c",
+                "taints": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "dedicated",
+                        "time_added": null,
+                        "value": "elasticsearch"
+                    }
+                ],
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.12.180",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "18.236.245.74",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-12-180.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-18-236-245-74.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-12-180.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "4",
+                    "ephemeral-storage": "117612512676",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32363000Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "4",
+                    "ephemeral-storage": "127617744Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32465400Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T19:46:41+00:00",
+                        "last_transition_time": "2019-05-22T19:46:41+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T19:33:30+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T19:33:30+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T19:33:30+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T19:33:30+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-22T19:46:45+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "docker.elastic.co/elasticsearch/elasticsearch-oss@sha256:f59f7936d018e9d2329dfa0705b305e2c8596045e80039108d67218ae5a967bc",
+                            "docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0"
+                        ],
+                        "size_bytes": 678439778
+                    },
+                    {
+                        "names": [
+                            "protokube:1.11.1"
+                        ],
+                        "size_bytes": 282663563
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "busybox@sha256:4b6ad3a68d34da29bf7c8ccb5d355ba8b4babcad1f99798204e7abb43e54ee3d",
+                            "busybox:latest"
+                        ],
+                        "size_bytes": 1199418
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "a080a5b1-1772-4628-9cd9-cdb10bd002f7",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec2943c61fdecdbd6ad5f51ef5d646bd",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec2943c6-1fde-cdbd-6ad5-f51ef5d646bd"
+                },
+                "phase": null,
+                "volumes_attached": [
+                    {
+                        "device_path": "/dev/xvdbq",
+                        "name": "kubernetes.io/aws-ebs/aws://us-west-2c/vol-081839f751dc3c810"
+                    }
+                ],
+                "volumes_in_use": [
+                    "kubernetes.io/aws-ebs/aws://us-west-2c/vol-081839f751dc3c810"
+                ]
+            }
+        },
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-02-17T19:53:42+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "m5.large",
+                    "beta.kubernetes.io/os": "linux",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2c",
+                    "kops.k8s.io/instancegroup": "master-us-west-2c",
+                    "kubernetes.io/hostname": "ip-10-131-13-145.us-west-2.compute.internal",
+                    "kubernetes.io/role": "master",
+                    "node-role.kubernetes.io/master": ""
+                },
+                "name": "ip-10-131-13-145.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144251",
+                "self_link": "/api/v1/nodes/ip-10-131-13-145.us-west-2.compute.internal",
+                "uid": "ba860810-32ed-11e9-8778-0a7da8025594"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-0f45deeabe8e9a0e1",
+                "pod_cidr": "100.96.2.0/24",
+                "provider_id": "aws:///us-west-2c/i-0f45deeabe8e9a0e1",
+                "taints": [
+                    {
+                        "effect": "NoSchedule",
+                        "key": "node-role.kubernetes.io/master",
+                        "time_added": null,
+                        "value": null
+                    }
+                ],
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.13.145",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "34.212.116.201",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-13-145.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-34-212-116-201.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-13-145.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "2",
+                    "ephemeral-storage": "91396653315",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7762796Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "2",
+                    "ephemeral-storage": "99171716Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7865196Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T05:51:19+00:00",
+                        "last_transition_time": "2019-05-22T05:51:19+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-17T17:36:14+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-17T17:36:14+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-17T17:36:14+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-02-17T19:53:42+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:04+00:00",
+                        "last_transition_time": "2019-05-17T17:36:14+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "protokube:1.10.0"
+                        ],
+                        "size_bytes": 278482183
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-apiserver@sha256:807ad928d8ff4a3baa62a20e8f213c310f6ee2dcfce7a8a0f39608a82124146f",
+                            "k8s.gcr.io/kube-apiserver:v1.10.12"
+                        ],
+                        "size_bytes": 228118007
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/etcd@sha256:d83d3545e06fb035db8512e33bd44afb55dea007a3abd7b17742d3ac6d235940",
+                            "k8s.gcr.io/etcd:3.0.17"
+                        ],
+                        "size_bytes": 168935516
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-controller-manager@sha256:1395d7f05e746b23719a326a02d2dda04f75bd2b88c82a41834b0a9de24ea248",
+                            "k8s.gcr.io/kube-controller-manager:v1.10.12"
+                        ],
+                        "size_bytes": 150890254
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:3c45b339ab2dc9c11c9c745e44afce27806dc1d8ecd1da84a88deb36756ac713",
+                            "weaveworks/weave-kube:2.4.0"
+                        ],
+                        "size_bytes": 130841267
+                    },
+                    {
+                        "names": [
+                            "kope/dns-controller@sha256:8fe88797f537df25615899d3bdd380632746320bb559cb220b854dc26334adc4",
+                            "kope/dns-controller:1.11.0"
+                        ],
+                        "size_bytes": 122807241
+                    },
+                    {
+                        "names": [
+                            "kope/dns-controller@sha256:a4f5c5490b23e6bad32028d223b172f3fc9a6d4251cc5eea6e5e389c8dc12024",
+                            "kope/dns-controller:1.10.0"
+                        ],
+                        "size_bytes": 119435348
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-scheduler@sha256:29c583c12b2b8ee9979b4fd15379531c92885aa26d46573313b2c89359b4606e",
+                            "k8s.gcr.io/kube-scheduler:v1.10.12"
+                        ],
+                        "size_bytes": 51225175
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:715b03e14874355f1f793f7bc11d843a00b390b2806bd996f1e47e8acb1020aa",
+                            "weaveworks/weave-npc:2.4.0"
+                        ],
+                        "size_bytes": 49122124
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "3deeb74f-ef2b-4cb3-babd-843b85297807",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec2c5a7b5f8471c7a2078fb03d240ea0",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec2c5a7b-5f84-71c7-a207-8fb03d240ea0"
+                },
+                "phase": null,
+                "volumes_attached": null,
+                "volumes_in_use": null
+            }
+        },
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-05-22T04:20:09+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "c5.4xlarge",
+                    "beta.kubernetes.io/os": "linux",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2c",
+                    "kops.k8s.io/instancegroup": "nodes",
+                    "kubernetes.io/hostname": "ip-10-131-13-250.us-west-2.compute.internal",
+                    "kubernetes.io/role": "node",
+                    "node-role.kubernetes.io/node": ""
+                },
+                "name": "ip-10-131-13-250.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144264",
+                "self_link": "/api/v1/nodes/ip-10-131-13-250.us-west-2.compute.internal",
+                "uid": "e27f32cf-7c48-11e9-9a35-0a7da8025594"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-09fe1d11007b3ceb6",
+                "pod_cidr": "100.96.8.0/24",
+                "provider_id": "aws:///us-west-2c/i-09fe1d11007b3ceb6",
+                "taints": null,
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.13.250",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "52.34.143.167",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-13-250.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-52-34-143-167.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-13-250.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "16",
+                    "ephemeral-storage": "138210652341",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "31787448Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "16",
+                    "ephemeral-storage": "149968156Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "31889848Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T05:50:35+00:00",
+                        "last_transition_time": "2019-05-22T05:50:35+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T04:20:09+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T04:20:09+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T04:20:09+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T04:20:09+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T04:23:37+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/idea-machine@sha256:3e8ea1d04d30dca5fe5c159a116e99d7c382eb0d062be2179acad6d2fca9bab0",
+                            "registry.gitlab.com/lldev-team/idea-machine:v1.1.8"
+                        ],
+                        "size_bytes": 1098584923
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/gist@sha256:80bcad9cb8c11ef9290742477dd7caba420a2fb97b56003bca78ee881c11b80e",
+                            "registry.gitlab.com/lldev-team/gist:v0.0.33"
+                        ],
+                        "size_bytes": 524918203
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/revsys/backupchecker@sha256:58db2e74b4db73ae3137f7b119abc4f1864243efd037e8add73bd5b9eed38fd1",
+                            "registry.gitlab.com/revsys/backupchecker:v0.0.6"
+                        ],
+                        "size_bytes": 303889221
+                    },
+                    {
+                        "names": [
+                            "protokube:1.11.1"
+                        ],
+                        "size_bytes": 282663563
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "83a9a835-c0d6-4c96-8767-f3510644ee4a",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec27f7d877581d6eb237ca3534f63e4f",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec27f7d8-7758-1d6e-b237-ca3534f63e4f"
+                },
+                "phase": null,
+                "volumes_attached": null,
+                "volumes_in_use": null
+            }
+        },
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-05-22T06:35:29+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "r5.xlarge",
+                    "beta.kubernetes.io/os": "linux",
+                    "dedicated": "elasticsearch",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2a",
+                    "kops.k8s.io/instancegroup": "logs",
+                    "kubernetes.io/hostname": "ip-10-131-5-27.us-west-2.compute.internal",
+                    "kubernetes.io/role": "node",
+                    "node-role.kubernetes.io/node": ""
+                },
+                "name": "ip-10-131-5-27.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144270",
+                "self_link": "/api/v1/nodes/ip-10-131-5-27.us-west-2.compute.internal",
+                "uid": "cae17327-7c5b-11e9-949d-0229a1da21f6"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-0442373d0428ff5dd",
+                "pod_cidr": "100.96.20.0/24",
+                "provider_id": "aws:///us-west-2a/i-0442373d0428ff5dd",
+                "taints": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "dedicated",
+                        "time_added": null,
+                        "value": "elasticsearch"
+                    }
+                ],
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.5.27",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "34.220.174.125",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-5-27.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-34-220-174-125.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-5-27.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "4",
+                    "ephemeral-storage": "117612512676",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32363000Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "4",
+                    "ephemeral-storage": "127617744Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32465400Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T06:40:31+00:00",
+                        "last_transition_time": "2019-05-22T06:40:31+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:10+00:00",
+                        "last_transition_time": "2019-05-22T06:35:29+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:10+00:00",
+                        "last_transition_time": "2019-05-22T06:35:29+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:10+00:00",
+                        "last_transition_time": "2019-05-22T06:35:29+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:10+00:00",
+                        "last_transition_time": "2019-05-22T06:35:29+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:10+00:00",
+                        "last_transition_time": "2019-05-22T06:40:33+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "docker.elastic.co/elasticsearch/elasticsearch-oss@sha256:f59f7936d018e9d2329dfa0705b305e2c8596045e80039108d67218ae5a967bc",
+                            "docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0"
+                        ],
+                        "size_bytes": 678439778
+                    },
+                    {
+                        "names": [
+                            "protokube:1.11.1"
+                        ],
+                        "size_bytes": 282663563
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "busybox@sha256:4b6ad3a68d34da29bf7c8ccb5d355ba8b4babcad1f99798204e7abb43e54ee3d",
+                            "busybox:latest"
+                        ],
+                        "size_bytes": 1199418
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "6b37b414-a04a-4a92-87dd-2e55a66f0f0e",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec2fbbd98160952f797f09ed3f6c7386",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec2fbbd9-8160-952f-797f-09ed3f6c7386"
+                },
+                "phase": null,
+                "volumes_attached": [
+                    {
+                        "device_path": "/dev/xvdcp",
+                        "name": "kubernetes.io/aws-ebs/aws://us-west-2a/vol-0c33284c4b04e875c"
+                    },
+                    {
+                        "device_path": "/dev/xvdbl",
+                        "name": "kubernetes.io/aws-ebs/aws://us-west-2a/vol-0ab123d3574cc9e3e"
+                    }
+                ],
+                "volumes_in_use": [
+                    "kubernetes.io/aws-ebs/aws://us-west-2a/vol-0ab123d3574cc9e3e",
+                    "kubernetes.io/aws-ebs/aws://us-west-2a/vol-0c33284c4b04e875c"
+                ]
+            }
+        },
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-05-22T04:13:45+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "c5.4xlarge",
+                    "beta.kubernetes.io/os": "linux",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2a",
+                    "kops.k8s.io/instancegroup": "nodes",
+                    "kubernetes.io/hostname": "ip-10-131-5-60.us-west-2.compute.internal",
+                    "kubernetes.io/role": "node",
+                    "node-role.kubernetes.io/node": ""
+                },
+                "name": "ip-10-131-5-60.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144277",
+                "self_link": "/api/v1/nodes/ip-10-131-5-60.us-west-2.compute.internal",
+                "uid": "fe0bccd6-7c47-11e9-949d-0229a1da21f6"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-055d401cd07b5787a",
+                "pod_cidr": "100.96.7.0/24",
+                "provider_id": "aws:///us-west-2a/i-055d401cd07b5787a",
+                "taints": null,
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.5.60",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "54.191.221.194",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-5-60.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-54-191-221-194.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-5-60.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "16",
+                    "ephemeral-storage": "138210652341",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "31787432Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "16",
+                    "ephemeral-storage": "149968156Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "31889832Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T05:51:01+00:00",
+                        "last_transition_time": "2019-05-22T05:51:01+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:11+00:00",
+                        "last_transition_time": "2019-05-22T04:18:19+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:11+00:00",
+                        "last_transition_time": "2019-05-22T04:18:19+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:11+00:00",
+                        "last_transition_time": "2019-05-22T04:18:19+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:11+00:00",
+                        "last_transition_time": "2019-05-22T04:13:45+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:11+00:00",
+                        "last_transition_time": "2019-05-22T04:18:29+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/idea-machine@sha256:3e8ea1d04d30dca5fe5c159a116e99d7c382eb0d062be2179acad6d2fca9bab0",
+                            "registry.gitlab.com/lldev-team/idea-machine:v1.1.8"
+                        ],
+                        "size_bytes": 1098584923
+                    },
+                    {
+                        "names": [
+                            "colemickens/oauth2_proxy@sha256:2ac6de24b9d06378c04d2ff29c4f9b54168c807774ea19d8268ac82fda0493af",
+                            "colemickens/oauth2_proxy:latest"
+                        ],
+                        "size_bytes": 777868170
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/revsys/docker-builds/docker@sha256:4f0497ed6b89d96b10a19c0a22b98381d1dc8998459920999b71d70f83e9bbc2",
+                            "registry.gitlab.com/revsys/docker-builds/docker:18-git-bumpversion-v1.0.11"
+                        ],
+                        "size_bytes": 648134589
+                    },
+                    {
+                        "names": [
+                            "quay.io/kubernetes-ingress-controller/nginx-ingress-controller@sha256:617076c3e3d4d0638a4927702530d8456bda64c67194f6daed272a59e93b992f",
+                            "quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.21.0"
+                        ],
+                        "size_bytes": 568050872
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/gist@sha256:80bcad9cb8c11ef9290742477dd7caba420a2fb97b56003bca78ee881c11b80e",
+                            "registry.gitlab.com/lldev-team/gist:v0.0.33"
+                        ],
+                        "size_bytes": 524918203
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/pop-model@sha256:1bbdfec54d15a2239007a0e74589c359bbecbf112d56f580780a193f9f7688de",
+                            "registry.gitlab.com/lldev-team/pop-model:v0.0.60"
+                        ],
+                        "size_bytes": 439627624
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/simpl-games-api-deployment@sha256:a137978105f3f4dfa4d49e5cab3dfef1d88eface7286e107ca20119ec6e72bcf",
+                            "registry.gitlab.com/lldev-team/simpl-games-api-deployment:v0.7.10"
+                        ],
+                        "size_bytes": 362105369
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/pop-ui@sha256:7186b5f93d322b7880de721fc4766f70bdad7a33166cd06c420a78d9d5c5535a",
+                            "registry.gitlab.com/lldev-team/pop-ui:v0.0.70"
+                        ],
+                        "size_bytes": 339731244
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/intermap/intermap@sha256:0042b3bbdac36e1ca6aa3b10fa9d7ba87a82e13f504458e5e7613d8aa49f06d7",
+                            "registry.gitlab.com/lldev-team/intermap/intermap:v1.0.31"
+                        ],
+                        "size_bytes": 330366979
+                    },
+                    {
+                        "names": [
+                            "protokube:1.11.1"
+                        ],
+                        "size_bytes": 282663563
+                    },
+                    {
+                        "names": [
+                            "grafana/grafana@sha256:aaf50da5faf2596bfb0caed81f08b5569110e7b5468b291fedad25d8cbc51f2b",
+                            "grafana/grafana:5.2.4"
+                        ],
+                        "size_bytes": 245209507
+                    },
+                    {
+                        "names": [
+                            "kiwigrid/k8s-sidecar@sha256:fd904c49c465a79afa59f441ee8702720ea47444c5f582f5887e2969f8407a4c",
+                            "kiwigrid/k8s-sidecar:0.0.3"
+                        ],
+                        "size_bytes": 174729302
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/gitlab-org/gitlab-runner@sha256:b7fe591c6672522f439c44eafae7f957c2af02e3dc36affd5f1d70a0aea9317e",
+                            "registry.gitlab.com/gitlab-org/gitlab-runner:alpine-v11.5.1"
+                        ],
+                        "size_bytes": 117239161
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "gcr.io/kubernetes-helm/tiller@sha256:cab750b402d24dd7b24756858c31eae6a007cd0ee91ea802b3891e2e940d214d",
+                            "gcr.io/kubernetes-helm/tiller:v2.12.3"
+                        ],
+                        "size_bytes": 81393869
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "quay.io/coreos/prometheus-operator@sha256:88cd66e273db8f96cfcce2eec03c04b04f0821f3f8d440396af2b5510667472d",
+                            "quay.io/coreos/prometheus-operator:v0.20.0"
+                        ],
+                        "size_bytes": 49474468
+                    },
+                    {
+                        "names": [
+                            "quay.io/jetstack/cert-manager-controller@sha256:0f1c86d6bef2f2a322b08f5726a638b1c40431d36106e8d4f246ff756c7fb1ec",
+                            "quay.io/jetstack/cert-manager-controller:v0.7.0"
+                        ],
+                        "size_bytes": 45986667
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/coredns@sha256:81936728011c0df9404cb70b95c17bbc8af922ec9a70d0561a5d01fefa6ffa51",
+                            "k8s.gcr.io/coredns:1.2.6"
+                        ],
+                        "size_bytes": 39995231
+                    },
+                    {
+                        "names": [
+                            "quay.io/jetstack/cert-manager-cainjector@sha256:a9bb745c944b80b154934d6af6c050597c182992f353d220a8f48b740843c14c",
+                            "quay.io/jetstack/cert-manager-cainjector:v0.7.0"
+                        ],
+                        "size_bytes": 39366327
+                    },
+                    {
+                        "names": [
+                            "nginx@sha256:9d46fd628d54ebe1633ee3cf0fe2acfcc419cfae541c63056530e39cd5620366",
+                            "nginx:1.13-alpine"
+                        ],
+                        "size_bytes": 17998089
+                    },
+                    {
+                        "names": [
+                            "nginx@sha256:ed31a625bd6a3df40315efd7b25417309e22326d90f508af007eca6f5f02466f",
+                            "nginx:1.12.1-alpine"
+                        ],
+                        "size_bytes": 15494201
+                    },
+                    {
+                        "names": [
+                            "oliver006/redis_exporter@sha256:413e960bdae04286bcb568fe7468bf88c34de91c00b36aaf613b72d8946db880",
+                            "oliver006/redis_exporter:v0.20.2"
+                        ],
+                        "size_bytes": 11008500
+                    },
+                    {
+                        "names": [
+                            "memcached@sha256:0bbeac26979772b33843c9dd7bdafbb903c9b342179189b0d531b87bb287ee74",
+                            "memcached:1.5-alpine"
+                        ],
+                        "size_bytes": 10230422
+                    },
+                    {
+                        "names": [
+                            "justwatch/elasticsearch_exporter@sha256:9b07116671dfa4eb292c487deee288994ae12f0dcb34f2d8b1669cb356de623d",
+                            "justwatch/elasticsearch_exporter:1.0.2"
+                        ],
+                        "size_bytes": 9185896
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "14c2d902-4e85-44f3-8bee-c564d930eb36",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec2ee2963e09797d4404094b93f2f3b5",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec2ee296-3e09-797d-4404-094b93f2f3b5"
+                },
+                "phase": null,
+                "volumes_attached": null,
+                "volumes_in_use": null
+            }
+        },
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-05-22T21:55:18+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "m5.large",
+                    "beta.kubernetes.io/os": "linux",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2a",
+                    "kops.k8s.io/instancegroup": "master-us-west-2a",
+                    "kubernetes.io/hostname": "ip-10-131-6-182.us-west-2.compute.internal",
+                    "kubernetes.io/role": "master",
+                    "node-role.kubernetes.io/master": ""
+                },
+                "name": "ip-10-131-6-182.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144263",
+                "self_link": "/api/v1/nodes/ip-10-131-6-182.us-west-2.compute.internal",
+                "uid": "49c0f774-7cdc-11e9-886d-021d3ef11f18"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-0ca018089fa062e22",
+                "pod_cidr": "100.96.22.0/24",
+                "provider_id": "aws:///us-west-2a/i-0ca018089fa062e22",
+                "taints": [
+                    {
+                        "effect": "NoSchedule",
+                        "key": "node-role.kubernetes.io/master",
+                        "time_added": null,
+                        "value": null
+                    }
+                ],
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.6.182",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "34.219.178.145",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-6-182.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-34-219-178-145.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-6-182.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "2",
+                    "ephemeral-storage": "91396653315",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7762780Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "2",
+                    "ephemeral-storage": "99171716Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7865180Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T21:55:29+00:00",
+                        "last_transition_time": "2019-05-22T21:55:29+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T22:00:55+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T22:00:55+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T22:00:55+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T21:55:11+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:07+00:00",
+                        "last_transition_time": "2019-05-22T22:00:55+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "protokube:1.11.1"
+                        ],
+                        "size_bytes": 282663563
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-apiserver@sha256:807ad928d8ff4a3baa62a20e8f213c310f6ee2dcfce7a8a0f39608a82124146f",
+                            "k8s.gcr.io/kube-apiserver:v1.10.12"
+                        ],
+                        "size_bytes": 228118007
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/etcd@sha256:d83d3545e06fb035db8512e33bd44afb55dea007a3abd7b17742d3ac6d235940",
+                            "k8s.gcr.io/etcd:3.0.17"
+                        ],
+                        "size_bytes": 168935516
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-controller-manager@sha256:1395d7f05e746b23719a326a02d2dda04f75bd2b88c82a41834b0a9de24ea248",
+                            "k8s.gcr.io/kube-controller-manager:v1.10.12"
+                        ],
+                        "size_bytes": 150890254
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-scheduler@sha256:29c583c12b2b8ee9979b4fd15379531c92885aa26d46573313b2c89359b4606e",
+                            "k8s.gcr.io/kube-scheduler:v1.10.12"
+                        ],
+                        "size_bytes": 51225175
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "b96bdf28-e010-44ab-910c-2b2502ca28e3",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec2468f4755aeb073a604d4c8c9f4451",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec2468f4-755a-eb07-3a60-4d4c8c9f4451"
+                },
+                "phase": null,
+                "volumes_attached": null,
+                "volumes_in_use": null
+            }
+        },
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-05-22T22:02:48+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "m5.large",
+                    "beta.kubernetes.io/os": "linux",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2b",
+                    "kops.k8s.io/instancegroup": "master-us-west-2b",
+                    "kubernetes.io/hostname": "ip-10-131-8-83.us-west-2.compute.internal",
+                    "kubernetes.io/role": "master",
+                    "node-role.kubernetes.io/master": ""
+                },
+                "name": "ip-10-131-8-83.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144268",
+                "self_link": "/api/v1/nodes/ip-10-131-8-83.us-west-2.compute.internal",
+                "uid": "565a6b97-7cdd-11e9-8b43-06300bc5ba3e"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-0374f3bdff48c065e",
+                "pod_cidr": "100.96.0.0/24",
+                "provider_id": "aws:///us-west-2b/i-0374f3bdff48c065e",
+                "taints": [
+                    {
+                        "effect": "NoSchedule",
+                        "key": "node-role.kubernetes.io/master",
+                        "time_added": null,
+                        "value": null
+                    }
+                ],
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.8.83",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "54.191.57.87",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-8-83.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-54-191-57-87.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-8-83.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "2",
+                    "ephemeral-storage": "91396653315",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7762796Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "2",
+                    "ephemeral-storage": "99171716Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7865196Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T22:11:21+00:00",
+                        "last_transition_time": "2019-05-22T22:11:21+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:08+00:00",
+                        "last_transition_time": "2019-05-22T22:11:22+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:08+00:00",
+                        "last_transition_time": "2019-05-22T22:11:22+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:08+00:00",
+                        "last_transition_time": "2019-05-22T22:11:22+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:08+00:00",
+                        "last_transition_time": "2019-05-22T22:02:42+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:08+00:00",
+                        "last_transition_time": "2019-05-22T22:11:22+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "protokube:1.11.1"
+                        ],
+                        "size_bytes": 282663563
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-apiserver@sha256:807ad928d8ff4a3baa62a20e8f213c310f6ee2dcfce7a8a0f39608a82124146f",
+                            "k8s.gcr.io/kube-apiserver:v1.10.12"
+                        ],
+                        "size_bytes": 228118007
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/etcd@sha256:d83d3545e06fb035db8512e33bd44afb55dea007a3abd7b17742d3ac6d235940",
+                            "k8s.gcr.io/etcd:3.0.17"
+                        ],
+                        "size_bytes": 168935516
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-controller-manager@sha256:1395d7f05e746b23719a326a02d2dda04f75bd2b88c82a41834b0a9de24ea248",
+                            "k8s.gcr.io/kube-controller-manager:v1.10.12"
+                        ],
+                        "size_bytes": 150890254
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-scheduler@sha256:29c583c12b2b8ee9979b4fd15379531c92885aa26d46573313b2c89359b4606e",
+                            "k8s.gcr.io/kube-scheduler:v1.10.12"
+                        ],
+                        "size_bytes": 51225175
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "bbadb3ae-0497-495a-b117-96701916fb83",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec2a993585cd72e5069babc7ac9f5405",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec2a9935-85cd-72e5-069b-abc7ac9f5405"
+                },
+                "phase": null,
+                "volumes_attached": null,
+                "volumes_in_use": null
+            }
+        },
+        {
+            "api_version": null,
+            "kind": null,
+            "metadata": {
+                "annotations": {
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "cluster_name": null,
+                "creation_timestamp": "2019-05-22T04:05:48+00:00",
+                "deletion_grace_period_seconds": null,
+                "deletion_timestamp": null,
+                "finalizers": null,
+                "generate_name": null,
+                "generation": null,
+                "initializers": null,
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "c5.4xlarge",
+                    "beta.kubernetes.io/os": "linux",
+                    "failure-domain.beta.kubernetes.io/region": "us-west-2",
+                    "failure-domain.beta.kubernetes.io/zone": "us-west-2b",
+                    "kops.k8s.io/instancegroup": "nodes",
+                    "kubernetes.io/hostname": "ip-10-131-9-91.us-west-2.compute.internal",
+                    "kubernetes.io/role": "node",
+                    "node-role.kubernetes.io/node": ""
+                },
+                "name": "ip-10-131-9-91.us-west-2.compute.internal",
+                "namespace": null,
+                "owner_references": null,
+                "resource_version": "60144258",
+                "self_link": "/api/v1/nodes/ip-10-131-9-91.us-west-2.compute.internal",
+                "uid": "e146c78f-7c46-11e9-a5da-06774e828854"
+            },
+            "spec": {
+                "config_source": null,
+                "external_id": "i-02a035de15386cc7a",
+                "pod_cidr": "100.96.6.0/24",
+                "provider_id": "aws:///us-west-2b/i-02a035de15386cc7a",
+                "taints": null,
+                "unschedulable": null
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.131.9.91",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "54.202.214.98",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "ip-10-131-9-91.us-west-2.compute.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "ec2-54-202-214-98.us-west-2.compute.amazonaws.com",
+                        "type": "ExternalDNS"
+                    },
+                    {
+                        "address": "ip-10-131-9-91.us-west-2.compute.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "16",
+                    "ephemeral-storage": "138210652341",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "31787448Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "16",
+                    "ephemeral-storage": "149968156Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "31889848Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "last_heartbeat_time": "2019-05-22T05:51:28+00:00",
+                        "last_transition_time": "2019-05-22T05:51:28+00:00",
+                        "message": "Weave pod has set this",
+                        "reason": "WeaveIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:06+00:00",
+                        "last_transition_time": "2019-05-22T04:13:12+00:00",
+                        "message": "kubelet has sufficient disk space available",
+                        "reason": "KubeletHasSufficientDisk",
+                        "status": "False",
+                        "type": "OutOfDisk"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:06+00:00",
+                        "last_transition_time": "2019-05-22T04:13:12+00:00",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:06+00:00",
+                        "last_transition_time": "2019-05-22T04:13:12+00:00",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:06+00:00",
+                        "last_transition_time": "2019-05-22T04:05:48+00:00",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "last_heartbeat_time": "2019-05-27T18:10:06+00:00",
+                        "last_transition_time": "2019-05-22T04:13:22+00:00",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "config": null,
+                "daemon_endpoints": {
+                    "kubelet_endpoint": {
+                        "port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/idea-machine@sha256:3e8ea1d04d30dca5fe5c159a116e99d7c382eb0d062be2179acad6d2fca9bab0",
+                            "registry.gitlab.com/lldev-team/idea-machine:v1.1.8"
+                        ],
+                        "size_bytes": 1098584923
+                    },
+                    {
+                        "names": [
+                            "colemickens/oauth2_proxy@sha256:2ac6de24b9d06378c04d2ff29c4f9b54168c807774ea19d8268ac82fda0493af",
+                            "colemickens/oauth2_proxy:latest"
+                        ],
+                        "size_bytes": 777868170
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/gist@sha256:80bcad9cb8c11ef9290742477dd7caba420a2fb97b56003bca78ee881c11b80e",
+                            "registry.gitlab.com/lldev-team/gist:v0.0.33"
+                        ],
+                        "size_bytes": 524918203
+                    },
+                    {
+                        "names": [
+                            "docker.elastic.co/kibana/kibana-oss@sha256:e1fa3f513ce258b9b531233450c10c765d587e22b21b416ba71a651cfb2c6a1c",
+                            "docker.elastic.co/kibana/kibana-oss:6.6.0"
+                        ],
+                        "size_bytes": 459019604
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/roe-model@sha256:cbef452b492969669a9dd550168076e3aff64f995d4957a07e7e01663da2703f",
+                            "registry.gitlab.com/lldev-team/roe-model:v2.2.60"
+                        ],
+                        "size_bytes": 416540372
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/revsys/docker-builds/docker@sha256:97e5f641feca33e0b53addc59054f98d6effc988d8abecb14c71cad8b1002f15",
+                            "registry.gitlab.com/revsys/docker-builds/docker:18-git-bumpversion-v1.0.2"
+                        ],
+                        "size_bytes": 404237910
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/simpl-games-api-deployment@sha256:a137978105f3f4dfa4d49e5cab3dfef1d88eface7286e107ca20119ec6e72bcf",
+                            "registry.gitlab.com/lldev-team/simpl-games-api-deployment:v0.7.10"
+                        ],
+                        "size_bytes": 362105369
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/pop-ui@sha256:7186b5f93d322b7880de721fc4766f70bdad7a33166cd06c420a78d9d5c5535a",
+                            "registry.gitlab.com/lldev-team/pop-ui:v0.0.70"
+                        ],
+                        "size_bytes": 339731244
+                    },
+                    {
+                        "names": [
+                            "registry.gitlab.com/lldev-team/roe-ui@sha256:1994c55d9671909f475aac319d73b537fb3e72eceb74e4eb97f394fab0ab9d9c",
+                            "registry.gitlab.com/lldev-team/roe-ui:v2.1.60"
+                        ],
+                        "size_bytes": 332443911
+                    },
+                    {
+                        "names": [
+                            "protokube:1.11.1"
+                        ],
+                        "size_bytes": 282663563
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-kube@sha256:f1b6edd296cf0b7e806b1a1a1f121c1e8095852a4129edd08401fe2e7aab652d",
+                            "weaveworks/weave-kube:2.5.0"
+                        ],
+                        "size_bytes": 148059571
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kubernetes-dashboard-amd64@sha256:1d2e1229a918f4bc38b5a3f9f5f11302b3e71f8397b492afac7f273a0008776a",
+                            "k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.0"
+                        ],
+                        "size_bytes": 122460923
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kubernetes-dashboard-amd64@sha256:0ae6b69432e78069c5ce2bcde0fe409c5c4d6f0f4d9cd50a17974fea38898747",
+                            "k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1"
+                        ],
+                        "size_bytes": 121711221
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy@sha256:7dda581722b4d1f6afc6d068d42d89b5b2ca4b7dba63642a3cf35dd901d05eac",
+                            "k8s.gcr.io/kube-proxy:v1.10.12"
+                        ],
+                        "size_bytes": 98295898
+                    },
+                    {
+                        "names": [
+                            "bitnami/redis@sha256:b730369049451f33d2e7020c21de680eb351abf7514796ab1cd1617e870a0b91",
+                            "bitnami/redis:4.0.12"
+                        ],
+                        "size_bytes": 93435427
+                    },
+                    {
+                        "names": [
+                            "bitnami/redis@sha256:8b378350e114597e50bd09317a0bc096f835d368cae8587f36c4d626ed834d13",
+                            "bitnami/redis:4.0.11-debian-9"
+                        ],
+                        "size_bytes": 93413032
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/ark@sha256:7ea9e4f67839c2a428007cb23690a46c8a58b82a6655ca3d8590937c5eb5b18b",
+                            "gladiatr72/ark:v0.9.11"
+                        ],
+                        "size_bytes": 87312523
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/heapster-amd64@sha256:fc33c690a3a446de5abc24b048b88050810a58b9e4477fa763a43d7df029301a",
+                            "k8s.gcr.io/heapster-amd64:v1.5.3"
+                        ],
+                        "size_bytes": 75318342
+                    },
+                    {
+                        "names": [
+                            "gladiatr72/kiam@sha256:36c57044141acb4096703dbda14d7dab36ff75ed3fef64507a40bdde0f845e2b",
+                            "gladiatr72/kiam:3.0rc1.2"
+                        ],
+                        "size_bytes": 50112544
+                    },
+                    {
+                        "names": [
+                            "weaveworks/weave-npc@sha256:5bc9e4241eb0e972d3766864b2aca085660638b9d596d4fe761096db46a8c60b",
+                            "weaveworks/weave-npc:2.5.0"
+                        ],
+                        "size_bytes": 49501582
+                    },
+                    {
+                        "names": [
+                            "quay.io/jetstack/cert-manager-webhook@sha256:e1a6831c3f3227aebed1abb96e166a6b9dac0519d8305b918ab722f76812126b",
+                            "quay.io/jetstack/cert-manager-webhook:v0.7.0"
+                        ],
+                        "size_bytes": 48643699
+                    },
+                    {
+                        "names": [
+                            "gcr.io/google_containers/metrics-server-amd64@sha256:78938f933822856f443e6827fe5b37d6cc2f74ae888ac8b33d06fdbe5f8c658b",
+                            "gcr.io/google_containers/metrics-server-amd64:v0.3.1"
+                        ],
+                        "size_bytes": 40767713
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/coredns@sha256:81936728011c0df9404cb70b95c17bbc8af922ec9a70d0561a5d01fefa6ffa51",
+                            "k8s.gcr.io/coredns:1.2.6"
+                        ],
+                        "size_bytes": 39995231
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/addon-resizer@sha256:dcec9a5c2e20b8df19f3e9eeb87d9054a9e94e71479b935d5cfdbede9ce15895",
+                            "k8s.gcr.io/addon-resizer:1.7"
+                        ],
+                        "size_bytes": 38983736
+                    },
+                    {
+                        "names": [
+                            "quay.io/coreos/kube-state-metrics@sha256:b7a3143bd1eb7130759c9259073b9f239d0eeda09f5210f1cd31f1a530599ea1",
+                            "quay.io/coreos/kube-state-metrics:v1.5.0"
+                        ],
+                        "size_bytes": 31820936
+                    },
+                    {
+                        "names": [
+                            "nginx@sha256:ed31a625bd6a3df40315efd7b25417309e22326d90f508af007eca6f5f02466f",
+                            "nginx:1.12.1-alpine"
+                        ],
+                        "size_bytes": 15494201
+                    },
+                    {
+                        "names": [
+                            "quay.io/jetstack/cert-manager-acmesolver@sha256:2544964cdd95ea164a899a4c76672f33ba7867d9d730842053b7820941b5069b",
+                            "quay.io/jetstack/cert-manager-acmesolver:v0.7.0"
+                        ],
+                        "size_bytes": 10388845
+                    },
+                    {
+                        "names": [
+                            "memcached@sha256:0bbeac26979772b33843c9dd7bdafbb903c9b342179189b0d531b87bb287ee74",
+                            "memcached:1.5-alpine"
+                        ],
+                        "size_bytes": 10230422
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/defaultbackend@sha256:865b0c35e6da393b8e80b7e3799f777572399a4cff047eb02a81fa6e7a48ed4b",
+                            "k8s.gcr.io/defaultbackend:1.4"
+                        ],
+                        "size_bytes": 4844064
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause-amd64@sha256:163ac025575b775d1c0f9bf0bdd0f086883171eb475b5068e7defa4ca9e76516",
+                            "k8s.gcr.io/pause-amd64:3.0"
+                        ],
+                        "size_bytes": 746888
+                    }
+                ],
+                "node_info": {
+                    "architecture": "amd64",
+                    "boot_id": "e5b10eff-5a02-46f0-bf77-699007a1e27a",
+                    "container_runtime_version": "docker://18.6.3",
+                    "kernel_version": "4.19.43-coreos",
+                    "kube_proxy_version": "v1.10.12",
+                    "kubelet_version": "v1.10.12",
+                    "machine_id": "ec2d21f589bf3d654124c298223060b2",
+                    "operating_system": "linux",
+                    "os_image": "Container Linux by CoreOS 2079.4.0 (Rhyolite)",
+                    "system_uuid": "ec2d21f5-89bf-3d65-4124-c298223060b2"
+                },
+                "phase": null,
+                "volumes_attached": null,
+                "volumes_in_use": null
+            }
+        }
+    ]
+}
