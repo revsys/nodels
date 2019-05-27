@@ -1,6 +1,6 @@
 import click
 
-from .instances import Instances
+from .cloud.instances import Instances
 from .kube import Nodes
 
 API_URL = "https://api.revsys.com"

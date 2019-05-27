@@ -53,7 +53,10 @@ class BaseParser:
         if date_str is None:
             return None
 
-        return date_parser(date_str)
+        if isinstance(date_str, str):
+            return date_parser(date_str)
+        else:
+            return date_str
 
     def size(self, json_path='$.metadata.labels."beta.kubernetes.io/instance-type"'):
         """ Cloud instance size of this node """

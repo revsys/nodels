@@ -21,7 +21,7 @@ class Node:
     kind: str
     region: str
     zone: str
-    data: str
+    data: dict
 
 
 class Nodes(BaseGather):
@@ -36,6 +36,7 @@ class Nodes(BaseGather):
         self.client = self.get_client()
         self.name = kwargs.get("cluster_name", None)
         self.id = kwargs.get("cluster_reporting_id", None)
+        self.nodes = []
 
     def get_client(self):
         config.load_kube_config()
@@ -47,12 +48,18 @@ class Nodes(BaseGather):
     def gather(self):
         """ Gather node information """
         kube_data = []
+        nodes = []
         node_data = self.get_node_data()
 
         for node in node_data.items:
-            kube_data.append(node.to_dict())
+            node_dict = node.to_dict()
+            kube_data.append(node_dict)
+            b = BaseParser(node_data=node_dict)
+            node_kwargs = b.node_kwargs()
+            nodes.append(Node(**node_kwargs))
 
         self.data["nodes"] = kube_data
+        self.nodes = nodes
 
     def report(self, url):
         pass
