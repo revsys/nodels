@@ -1,4 +1,4 @@
-from .base import BaseGather
+from ..base import BaseGather
 
 
 class Instances(BaseGather):

@@ -1,4 +1,4 @@
-from nodels.instances import Instances
+from nodels.cloud import Instances
 
 
 def test_init():
