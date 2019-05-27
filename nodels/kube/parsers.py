@@ -27,7 +27,7 @@ class BaseParser:
 
         return node_data
 
-    def _get(self, path):
+    def get(self, path):
         matches = parse(path).find(self.data)
 
         if not len(matches):
@@ -38,24 +38,22 @@ class BaseParser:
 
         return matches[0].value
 
-    def get_name(self, json_path="$.metadata.name"):
+    def name(self, json_path="$.metadata.name"):
         """ Retrieve the name from `metadata.name` """
-        return self._get(json_path)
+        return self.get(json_path)
 
-    def get_external_id(self, json_path="$.spec.external_id"):
+    def external_id(self, json_path="$.spec.external_id"):
         """ Return the node's external ID """
-        return self._get(json_path)
+        return self.get(json_path)
 
-    def get_created(self, json_path="$.metadata.creation_timestamp"):
+    def created(self, json_path="$.metadata.creation_timestamp"):
         """ Return this node's creation timestamp as a datetime """
-        date_str = self._get(json_path)
+        date_str = self.get(json_path)
 
         if date_str is None:
             return None
 
         return date_parser(date_str)
 
-    def get_size(
-        self, json_path='$.metadata.labels."beta.kubernetes.io/instance-type"'
-    ):
-        return self._get(json_path)
+    def size(self, json_path='$.metadata.labels."beta.kubernetes.io/instance-type"'):
+        return self.get(json_path)
