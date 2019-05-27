@@ -27,7 +27,7 @@ def cli(ctx, api_url):
 
 
 @cli.command()
-def nodes():
+def nodes(name, id):
     """ Get information on Kubernetes nodes """
     click.echo("Get Nodes!")
     n = Nodes()
@@ -50,12 +50,14 @@ def instances(region):
 @cli.command()
 @click.pass_context
 @click.option("-q / --quiet", is_flag=True)
-def report_nodes(ctx, quiet):
+@click.option("--name", default=None, envvar="NODELS_CLUSTER_NAME", help="Cluster name")
+@click.option("--id", default=None, envvar="NODELS_CLUSTER_ID", help="Cluster API ID")
+def report_nodes(ctx, quiet, name, id):
     """ Gather and report on Kubernetes nodes """
     click.echo("Report Nodes!")
     n = Nodes()
     n.gather()
-    result = n.report(url=ctx.obj["API_URL"])
+    result = n.report(url=ctx.obj["API_URL"], name=name, id=id)
 
     if not quiet:
         print(n.json(pretty=True))

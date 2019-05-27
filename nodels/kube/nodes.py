@@ -47,19 +47,41 @@ class Nodes(BaseGather):
 
     def gather(self):
         """ Gather node information """
-        kube_data = []
-        nodes = []
         node_data = self.get_node_data()
+        kube_data = []
 
         for node in node_data.items:
             node_dict = node.to_dict()
             kube_data.append(node_dict)
-            b = BaseParser(node_data=node_dict)
-            node_kwargs = b.node_kwargs()
-            nodes.append(Node(**node_kwargs))
+            self.add_node(node_dict)
 
         self.data["nodes"] = kube_data
-        self.nodes = nodes
 
-    def report(self, url):
-        pass
+    def add_node(self, node_dict):
+        b = BaseParser(node_data=node_dict)
+        node_kwargs = b.node_kwargs()
+        self.nodes.append(Node(**node_kwargs))
+
+    def generate_report(self, name=None, id=None):
+        """ Generate report data """
+        data = {"name": name, "id": id, "nodes": []}
+
+        for n in self.nodes:
+            data["nodes"].append(
+                {
+                    "name": n.name,
+                    "external_id": n.external_id,
+                    "created": n.created,
+                    "size": n.size,
+                    "kind": n.kind,
+                    "region": n.region,
+                    "zone": n.zone,
+                    "data": n.data,
+                }
+            )
+
+        return data
+
+    def report(self, url, name=None, id=None):
+        data = self.generate_report(name, id)
+
