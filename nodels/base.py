@@ -1,6 +1,8 @@
 import datetime
 import json
 
+from dataclasses import dataclass
+
 
 def json_encoder(o):
     if isinstance(o, (datetime.date, datetime.datetime)):
@@ -36,3 +38,18 @@ class BaseGather:
 
     def report(self, url):
         raise NotImplementedError("report needs to be defined in subclass")
+
+
+@dataclass
+class Report:
+    """
+    Small class to handle our reports back to the API
+    """
+
+    data: dict
+
+    def to_dict(self):
+        return self.data
+
+    def to_json(self):
+        return json.dumps(self.to_dict(), indent=2, default=json_encoder)

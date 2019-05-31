@@ -1,4 +1,4 @@
-from ..base import BaseGather
+from ..base import BaseGather, Report
 
 
 class Instances(BaseGather):
@@ -17,5 +17,13 @@ class Instances(BaseGather):
     def gather(self):
         pass
 
-    def report(self, url):
-        pass
+    def generate_report(self, name=None, id=None):
+        """ Format our report data """
+        data = {"name": name, "id": id, "instances": []}
+        report = Report(data=data)
+        return report
+
+    def report(self, url, token, name=None, id=None):
+        report = self.generate_report(name, id)
+        return report
+

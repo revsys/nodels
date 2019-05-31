@@ -14,7 +14,10 @@ API_URL = "https://api.revsys.com"
     envvar="NODELS_API_URL",
     help="Base API URL for reporting",
 )
-def cli(ctx, api_url):
+@click.option(
+    "--api-token", default=None, envvar="NODELS_API_TOKEN", help="Auth token for API"
+)
+def cli(ctx, api_url, api_token):
     """
     Gather information about Kubernetes Nodes and Cloud Provider Compute
     Instances.
@@ -24,6 +27,7 @@ def cli(ctx, api_url):
     """
     ctx.ensure_object(dict)
     ctx.obj["API_URL"] = api_url
+    ctx.obj["API_TOKEN"] = api_token
 
 
 @cli.command()
@@ -52,15 +56,17 @@ def instances(region):
 @click.option("-q / --quiet", is_flag=True)
 @click.option("--name", default=None, envvar="NODELS_CLUSTER_NAME", help="Cluster name")
 @click.option("--id", default=None, envvar="NODELS_CLUSTER_ID", help="Cluster API ID")
-def report_nodes(ctx, quiet, name, id):
+def report_nodes(ctx, q, name, id):
     """ Gather and report on Kubernetes nodes """
     click.echo("Report Nodes!")
     n = Nodes()
     n.gather()
-    result = n.report(url=ctx.obj["API_URL"], name=name, id=id)
+    report = n.report(
+        url=ctx.obj["API_URL"], token=ctx.obj["API_TOKEN"], name=name, id=id
+    )
 
-    if not quiet:
-        print(n.json(pretty=True))
+    if not q:
+        print(report.to_json())
 
 
 @cli.command()
@@ -69,15 +75,19 @@ def report_nodes(ctx, quiet, name, id):
     "--region", default=None, envvar="NODELS_REGION", help="Limit to a single region"
 )
 @click.option("-q / --quiet", is_flag=True)
-def report_instances(ctx, region, quiet):
+@click.option("--name", default=None, envvar="NODELS_ACCOUNT_NAME", help="Cluster name")
+@click.option("--id", default=None, envvar="NODELS_ACCOUNT_ID", help="Cluster API ID")
+def report_instances(ctx, region, q, name, id):
     """ Gather and report on Cloud instances in account """
     click.echo("Report Instances!")
     i = Instances(region=region)
     i.gather()
-    result = i.report(url=ctx.obj["API_URL"])
+    report = i.report(
+        url=ctx.obj["API_URL"], token=ctx.obj["API_TOKEN"], name=name, id=id
+    )
 
-    if not quiet:
-        print(i.json(pretty=True))
+    if not q:
+        print(report.to_json())
 
 
 if __name__ == "__main__":

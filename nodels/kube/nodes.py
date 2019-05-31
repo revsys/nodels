@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 from kubernetes import client, config
 
-from ..base import BaseGather
+from ..base import BaseGather, Report
 
 from .parsers import BaseParser
 
@@ -79,9 +79,9 @@ class Nodes(BaseGather):
                     "data": n.data,
                 }
             )
+        report = Report(data=data)
+        return report
 
-        return data
-
-    def report(self, url, name=None, id=None):
+    def report(self, url, token, name=None, id=None):
         data = self.generate_report(name, id)
-
+        return data
