@@ -8,7 +8,7 @@ setup(
     install_requires=[
         "Click==7.0",
         "kubernetes==9.0.0",
-        "ipython==7.5.0",
+        "ipython==7.16.3",
         "boto3==1.9.154",
         "python-dateutil>=2.8.0",
         "requests>=2.22.0",
